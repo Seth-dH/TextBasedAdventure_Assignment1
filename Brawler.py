@@ -1,6 +1,19 @@
+import App
+
 charcaterDesc = "(Brawler Character Description)"
 
-HP = 2
-SP = 2
-AP = 0
-IP = 0
+class Brawler:
+    
+    # HP --> 0
+    # SP --> 1
+    # AP --> 2
+    # IP --> 3
+    
+    def __init__(self):
+        self._hp = 3
+        self._sp = 2
+        self._ap = 0
+        self._ip = 0
+        
+    def BeginStory(self):
+        
