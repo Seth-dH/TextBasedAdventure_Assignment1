@@ -25,6 +25,16 @@ def StartChallenege(challengeNum):
         App.DisplayMessage("the start of first challenge, Weakness: AP")
         choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
+    elif(challengeNum == 2):
+        currentWeakness = 1
+        App.DisplayMessage("the start of the second challenge, Weakness: SP")
+        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
+    elif(challengeNum == 3):
+        currentWeakness = 3
+        App.DisplayMessage("the start of the third challenge, Weakness: IP")
+        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     
     StartChallenege(challengeNum + 1)
     
