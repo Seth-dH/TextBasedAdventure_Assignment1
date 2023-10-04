@@ -25,8 +25,8 @@ playerName = App.AskOpenQuestion("Please input your name: ")
 
 if(choice == 1):
     App.DisplayMessage("Welcome %s, The Sharpshooter" % (playerName))
+    Sharpshooter.StartChallenege(1)
     
 elif(choice == 2):
    App.DisplayMessage("Welcome %s, The Brawler" % (playerName)) 
-   brawler = Brawler()
-   brawler.BeginStory()
+   
