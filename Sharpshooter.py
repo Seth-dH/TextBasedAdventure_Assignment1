@@ -54,7 +54,7 @@ def PlayFinalBoss():
         successValue = RollSuccess(choice, None)
         ResultOfRoll(successValue, choice)
         if(successValue == 1):
-            App.DisplayMessage("The boos has lost HP")
+            App.DisplayMessage("The boss has lost HP")
             bossHp -= 1
         if(successValue == 2):
             App.DisplayMessage("The boss has lost a lot of HP")
