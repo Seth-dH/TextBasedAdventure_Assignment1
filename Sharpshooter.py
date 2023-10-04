@@ -35,8 +35,35 @@ def StartChallenege(challengeNum):
         App.DisplayMessage("the start of the third challenge, Weakness: IP")
         choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
+    elif(challengeNum >= 4):
+        PlayFinalBoss()
+        App.DisplayMessage("Thanks For Playing")
+        exit()
     
     StartChallenege(challengeNum + 1)
+    
+def PlayFinalBoss():
+    global hp
+    
+    bossHp = 3
+    App.DisplayMessage("The final boss")
+    while (bossHp > 0 and hp > 0):
+        choice = App.AskOptionedQuestion("What will you do", "SP", "AP", "IP", None)
+        successValue = RollSuccess(choice, None)
+        ResultOfRoll(successValue, choice)
+        if(successValue == 1):
+            App.DisplayMessage("The boos has lost HP")
+            bossHp -= 1
+        if(successValue == 2):
+            App.DisplayMessage("The boss has lost a lot of HP")
+            bossHp -= 2
+            
+        App.DisplayMessage("The boss has " + str(bossHp) + " HP left")
+        
+    if(bossHp <= 0):
+        App.DisplayMessage("You Killed the boss!")
+    if(hp <= 0):
+        App.DisplayMessage("You died! Game Over")
     
 def RollSuccess(choice, currentWeakness):
     global hp
