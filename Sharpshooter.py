@@ -4,14 +4,16 @@ import App, Challenge
 
 charcaterDesc = "This character excels in Ranged weaponry, they are known as one of the most accurate Sharpshooters in Cyber City."
     
+# stats numeric value:  
 # HP --> 0
 # SP --> 1
 # AP --> 2
 # IP --> 3
-hp = 3
-sp = 0
-ap = 2
-ip = 1
+
+hp = 3 # helth points
+sp = 0 # strength points
+ap = 2 # accuracy points
+ip = 1 # intellegence points
     
 def StartChallenege(challengeNum):
     global hp
@@ -21,9 +23,9 @@ def StartChallenege(challengeNum):
     
     # challenege description
     if(challengeNum == 1):
-        currentWeakness = 2
-        App.DisplayMessage("the start of first challenge, Weakness: AP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        currentWeakness = 1
+        App.DisplayMessage("The first challenege you must complete is destroying the security systems. Weakness: SP")
+        choice = App.AskOptionedQuestion("What should you do", "Smash the emergeny stop button: SP", "Shoot the electrical box that supplies power for the security system: AP", "Call up a guard on the comms and tell them that the enemy has take control of the security system, making them shut it down: IP", None)
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
         currentWeakness = 1

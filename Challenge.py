@@ -9,9 +9,8 @@ def RollSucess (weakness, actionType, value):
     numOfRolls = 1 + value
     if(weakness == actionType):
         numOfRolls += 1
-    
-    App.DisplayMessage("Beginning Roll")
-    App.DisplayMessage("Number of rolls:" + str(numOfRolls))
+
+    App.DisplayMessage("Number of rolls: " + str(numOfRolls))
     
     #begin sucess calculation
     for num in range(numOfRolls):
@@ -21,7 +20,7 @@ def RollSucess (weakness, actionType, value):
             wasSuccessful = True
             App.DisplayMessage("roll " + str(num + 1) + " was: " + str(roll) + " (Successfull)")
             break
-        App.DisplayMessage("roll " + str(num + 1) + "was: " + str(roll) + " (Un-sucessfull)")
+        App.DisplayMessage("roll " + str(num + 1) + " was: " + str(roll) + " (Un-sucessfull)")
     else:
         roll = random.randint(1, 6)
         if(roll == 6):

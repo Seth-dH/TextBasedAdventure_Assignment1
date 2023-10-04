@@ -1,15 +1,16 @@
 import App, Challenge
 
-charcaterDesc = "This character excels in Ranged weaponry, they are known as one of the most accurate Sharpshooters in Cyber City."
-    
+charcaterDesc = "The Brawns of the operation, this character uses his heavily augmented fists to get most jobs done. His favorite food is Mashed Potatoes."
+
+# stats numeric value:  
 # HP --> 0
 # SP --> 1
 # AP --> 2
 # IP --> 3
-hp = 3
-sp = 2
-ap = 0
-ip = 1
+hp = 3 # helth points
+sp = 2 # strength points
+ap = 0 # accuracy points
+ip = 1 # intellegence points
     
 def StartChallenege(challengeNum):
     global hp
