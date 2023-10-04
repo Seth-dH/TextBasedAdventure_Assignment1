@@ -2,7 +2,7 @@ import App, Challenge
 
 '''This class deals with the sharshooter storyline, running all of the challeneges'''
 
-charcaterDesc = "(Sharpshooter Character Description)"
+charcaterDesc = "This character excels in Ranged weaponry, they are known as one of the most accurate Sharpshooters in Cyber City."
     
 # HP --> 0
 # SP --> 1
