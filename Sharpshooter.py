@@ -25,17 +25,17 @@ def StartChallenege(challengeNum):
     if(challengeNum == 1):
         currentWeakness = 1
         App.DisplayMessage("The first challenege you must complete is destroying the security systems. Weakness: SP")
-        choice = App.AskOptionedQuestion("What should you do", "Smash the emergeny stop button: SP", "Shoot the electrical box that supplies power for the security system: AP", "Call up a guard on the comms and tell them that the enemy has take control of the security system, making them shut it down: IP")
+        choice = App.AskOptionedQuestion("What should you do:", "Smash the emergeny stop button: SP", "Shoot the electrical box that supplies power for the security system: AP", "Call up a guard on the comms and tell them that the enemy has take control of the security system, making them shut it down: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
-        currentWeakness = 2
-        App.DisplayMessage("As you walk into the next room you are confronted by a grunt. Weakness: AP")
-        choice = App.AskOptionedQuestion("What should you do?", "Hit him with a metal bar you picked up off the ground: SP", "Shoot him with your lazer gun: AP", "Trick him into thinking you’re another grunt: IP")
+        currentWeakness = 3
+        App.DisplayMessage("As you walk into the next room you are confronted by a grunt. Weakness: IP")
+        choice = App.AskOptionedQuestion("What should you do:", "Hit him with a metal bar you picked up off the ground: SP", "Shoot him with your lazer gun: AP", "Trick him into thinking you’re another grunt: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
-        currentWeakness = 3
-        App.DisplayMessage("the start of the third challenge, Weakness: IP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP")
+        currentWeakness = 2
+        App.DisplayMessage("Finally, you have one last challenge to face. In order to get to the final room you have to fight your way up the stairs. Weakness: AP")
+        choice = App.AskOptionedQuestion("What should you do:", "bash your way up the good ‘ol fashion way: SP", "pick them all off as they’re coming down the stairs: AP", "set off the sprinkler systems s the grunts all fall down the stairs: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum >= 4):
         PlayFinalBoss()
@@ -48,9 +48,9 @@ def PlayFinalBoss():
     global hp
     
     bossHp = 3
-    App.DisplayMessage("The final boss")
+    App.DisplayMessage("finally, as you make your way up the sair you head inot the final room. this is where you meet the rival gang boss. In order to get back the dats you have to pry it from his cold dead hands. Weakness: NONE")
     while (bossHp > 0 and hp > 0):
-        choice = App.AskOptionedQuestion("What will you do", "SP", "AP", "IP", None)
+        choice = App.AskOptionedQuestion("What will you do: ", "Shoot him with you gun: SP", "fight him with your bare fists: AP", "Try and convince him to hand over the data so nobody get's hurt: IP", None)
         successValue = RollSuccess(choice, None)
         ResultOfRoll(successValue, choice)
         if(successValue == 1):
@@ -63,7 +63,8 @@ def PlayFinalBoss():
         App.DisplayMessage("The boss has " + str(bossHp) + " HP left")
         
     if(bossHp <= 0):
-        App.DisplayMessage("You Killed the boss!")
+        App.DisplayMessage("You Killed the boss! you were able to sucessfully retrive the data and save your gang!")
+        App.DisplayMessage("Congradulations! You Won!")
     if(hp <= 0):
         App.DisplayMessage("You died! Game Over")
     
