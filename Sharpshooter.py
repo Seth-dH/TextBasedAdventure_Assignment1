@@ -25,17 +25,17 @@ def StartChallenege(challengeNum):
     if(challengeNum == 1):
         currentWeakness = 1
         App.DisplayMessage("The first challenege you must complete is destroying the security systems. Weakness: SP")
-        choice = App.AskOptionedQuestion("What should you do", "Smash the emergeny stop button: SP", "Shoot the electrical box that supplies power for the security system: AP", "Call up a guard on the comms and tell them that the enemy has take control of the security system, making them shut it down: IP", None)
+        choice = App.AskOptionedQuestion("What should you do", "Smash the emergeny stop button: SP", "Shoot the electrical box that supplies power for the security system: AP", "Call up a guard on the comms and tell them that the enemy has take control of the security system, making them shut it down: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
-        currentWeakness = 1
-        App.DisplayMessage("the start of the second challenge, Weakness: SP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        currentWeakness = 2
+        App.DisplayMessage("As you walk into the next room you are confronted by a grunt. Weakness: AP")
+        choice = App.AskOptionedQuestion("What should you do?", "Hit him with a metal bar you picked up off the ground: SP", "Shoot him with your lazer gun: AP", "Trick him into thinking you’re another grunt: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
         currentWeakness = 3
         App.DisplayMessage("the start of the third challenge, Weakness: IP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum >= 4):
         PlayFinalBoss()

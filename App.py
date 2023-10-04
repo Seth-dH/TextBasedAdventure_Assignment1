@@ -7,7 +7,7 @@ def DisplayMessage(textToDisplay):
 def EmptyLine():
     print(" ")
     
-def AskOptionedQuestion(textToAsk, option1, option2, option3, option4):
+def AskOptionedQuestion(textToAsk, option1, option2, option3):
     numOfOptions = 0
     while(True): 
         print(textToAsk)
@@ -22,9 +22,6 @@ def AskOptionedQuestion(textToAsk, option1, option2, option3, option4):
         if(option3 != None):
             print("3: " + option3)
             numOfOptions = 3
-        if(option4 != None):
-            print("4: " + option4)
-            numOfOptions = 4
             
         print(" ")
         playerCh = input("Select one by typing the option number: ")
