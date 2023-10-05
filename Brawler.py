@@ -33,8 +33,8 @@ def StartChallenege(challengeNum):
         choice = App.AskOptionedQuestion("What should you do:", "smash them all, with your bare hands: SP", "use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
-        currentWeakness = 3
-        App.DisplayMessage("Finaly, to get to the room that storing the data, you have to go up an elevator shaft. Weakness: IP")
+        currentWeakness = 1
+        App.DisplayMessage("Finaly, to get to the room that storing the data, you have to go up an elevator shaft. Weakness: SP")
         choice = App.AskOptionedQuestion("What should you do:", "call the elevator and fight all of the grunts that rush out: SP", "shoot the cables holding up the elevator and then climb the elevator shaft: AP", "call the elevator, and then sneak in behind all the guard that come pouring out: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum >= 4):
