@@ -62,8 +62,6 @@ def PlayFinalBoss():
     if(bossHp <= 0):
         App.DisplayMessage("You Killed the boss! you were able to sucessfully retrive the data and save your gang!")
         App.DisplayMessage("Congradulations! You Won!")
-    if(hp <= 0):
-        App.DisplayMessage("You died! Game Over")
     
         
 def RollSuccess(choice, currentWeakness):
