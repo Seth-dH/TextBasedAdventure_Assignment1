@@ -29,8 +29,8 @@ def StartChallenege(challengeNum):
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
         currentWeakness = 2
-        App.DisplayMessage("As you are waling along, you come aross security drones that start to hinder your path. you must now destroy them to move on. Weakness: AP")
-        choice = App.AskOptionedQuestion("What should you do:", "smash them all, with your bare hands: SP", ": use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP")
+        App.DisplayMessage("As you are walking along, you come aross security drones that start to hinder your path. you must now destroy them to move on. Weakness: AP")
+        choice = App.AskOptionedQuestion("What should you do:", "smash them all, with your bare hands: SP", "use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
         currentWeakness = 3
