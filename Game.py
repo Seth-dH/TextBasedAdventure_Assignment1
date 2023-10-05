@@ -32,4 +32,5 @@ if(choice == 1):
     
 elif(choice == 2):
    App.DisplayMessage("Welcome %s, The Brawler" % (playerName)) 
+   Brawler.StartChallenege(1)
    
