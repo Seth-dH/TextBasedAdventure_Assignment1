@@ -7,11 +7,12 @@ charcaterDesc = "The Brawns of the operation, this character uses his heavily au
 # SP --> 1
 # AP --> 2
 # IP --> 3
-hp = 3 # helth points
+hp = 5 # helth points
 sp = 2 # strength points
 ap = 0 # accuracy points
-ip = 1 # intellegence points
-    
+ip = 0 # intellegence points
+
+"""Starts whatever challenge number is passed into this function"""
 def StartChallenege(challengeNum):
     global hp
     global sp
@@ -40,7 +41,8 @@ def StartChallenege(challengeNum):
         exit()
     
     StartChallenege(challengeNum + 1)
-    
+
+'''Starts the final boss challenge '''
 def PlayFinalBoss():
     global hp
     
@@ -63,7 +65,7 @@ def PlayFinalBoss():
         App.DisplayMessage("You Killed the boss! you were able to sucessfully retrive the data and save your gang!")
         App.DisplayMessage("Congradulations! You Won!")
     
-        
+'''Rolls the success of the challenge depending on which option the player chose to use'''     
 def RollSuccess(choice, currentWeakness):
     global hp
     global sp
@@ -79,6 +81,7 @@ def RollSuccess(choice, currentWeakness):
         successValue = Challenge.RollSucess(currentWeakness, 3, ip)  
     return successValue
 
+'''Updates the result of the roll to the players stats depending on if it was a critical loss, loss, win or critical win'''
 def ResultOfRoll(successValue, choice):
     global hp
     global sp
@@ -122,7 +125,8 @@ def ResultOfRoll(successValue, choice):
         exit()
             
     DisplayStats()
-            
+    
+'''Displays the user's current stat points'''         
 def DisplayStats():
     global hp
     global sp

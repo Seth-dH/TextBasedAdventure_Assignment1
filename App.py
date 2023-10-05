@@ -1,12 +1,14 @@
 '''This is the method that deals with player interaction, along with displaying messages/story to the player'''
 
-# used for displaying text to the player
+'''Is called from other modules in order to display messages to the user'''
 def DisplayMessage(textToDisplay):
     print (textToDisplay)
-    
+
+'''Adds an empty line to the terminal to break up the text to make it a bit more readable'''
 def EmptyLine():
     print(" ")
-    
+
+'''When called this function asks a question and then returns a number based on whichever choice the player decided to pick'''
 def AskOptionedQuestion(textToAsk, option1, option2, option3):
     numOfOptions = 0
     while(True): 
@@ -37,5 +39,6 @@ def AskOptionedQuestion(textToAsk, option1, option2, option3):
                 print("Invalid input, Please try again.")
                 continue
 
+'''When called this function asked the player a question and then reurns the player’s answer (could be anything)'''
 def AskOpenQuestion(textToAsk):
     return input(textToAsk)

@@ -10,11 +10,12 @@ charcaterDesc = "This character excels in Ranged weaponry, they are known as one
 # AP --> 2
 # IP --> 3
 
-hp = 3 # helth points
+hp = 4 # health points
 sp = 0 # strength points
 ap = 2 # accuracy points
 ip = 1 # intellegence points
     
+"""Starts whatever challenge number is passed into this function"""
 def StartChallenege(challengeNum):
     global hp
     global sp
@@ -44,6 +45,7 @@ def StartChallenege(challengeNum):
     
     StartChallenege(challengeNum + 1)
     
+'''Starts the final boss challenge '''
 def PlayFinalBoss():
     global hp
     
@@ -66,6 +68,7 @@ def PlayFinalBoss():
         App.DisplayMessage("You Killed the boss! you were able to sucessfully retrive the data and save your gang!")
         App.DisplayMessage("Congradulations! You Won!")
     
+'''Rolls the success of the challenge depending on which option the player chose to use'''
 def RollSuccess(choice, currentWeakness):
     global hp
     global sp
@@ -81,6 +84,7 @@ def RollSuccess(choice, currentWeakness):
         successValue = Challenge.RollSucess(currentWeakness, 3, ip)  
     return successValue
 
+'''Updates the result of the roll to the players stats depending on if it was a critical loss, loss, win or critical win'''
 def ResultOfRoll(successValue, choice):
     global hp
     global sp
@@ -124,7 +128,8 @@ def ResultOfRoll(successValue, choice):
         exit()
             
     DisplayStats()
-            
+
+'''Displays the user's current stat points'''       
 def DisplayStats():
     global hp
     global sp
