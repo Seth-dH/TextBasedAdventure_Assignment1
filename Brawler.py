@@ -22,17 +22,17 @@ def StartChallenege(challengeNum):
     if(challengeNum == 1):
         currentWeakness = 3
         App.DisplayMessage("for the fist challenge of this mission you must find the map of this building so you know where you need to go. Weakness: IP")
-        choice = App.AskOptionedQuestion("What should you do:", "beat the crap out of a grunt lying on the floor until he sends you the map data: SP", "throw a brick at a fire alarm on a higher floor causing exit maps to appear: AP", "guess what the passcode for the main computer is: IP", None)
+        choice = App.AskOptionedQuestion("What should you do:", "beat the crap out of a grunt lying on the floor until he sends you the map data: SP", "throw a brick at a fire alarm on a higher floor causing exit maps to appear: AP", "guess what the passcode for the main computer is: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
         currentWeakness = 2
         App.DisplayMessage("As you are waling along, you come aross security drones that start to hinder your path. you must now destroy them to move on. Weakness: AP")
-        choice = App.AskOptionedQuestion("What should you do:", "smash them all, with your bare hands: SP", ": use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP", None)
+        choice = App.AskOptionedQuestion("What should you do:", "smash them all, with your bare hands: SP", ": use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
         currentWeakness = 3
         App.DisplayMessage("Finaly, to get to the room that storing the data, you have to go up an elevator shaft. Weakness: IP")
-        choice = App.AskOptionedQuestion("What should you do:", "call the elevator and fight all of the grunts that rush out: SP", "shoot the cables holding up the elevator and then climb the elevator shaft: AP", "call the elevator, and then sneak in behind all the guard that come pouring out: IP", None)
+        choice = App.AskOptionedQuestion("What should you do:", "call the elevator and fight all of the grunts that rush out: SP", "shoot the cables holding up the elevator and then climb the elevator shaft: AP", "call the elevator, and then sneak in behind all the guard that come pouring out: IP")
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum >= 4):
         PlayFinalBoss()
