@@ -47,7 +47,7 @@ def PlayFinalBoss():
     bossHp = 3
     App.DisplayMessage("finally, as you make your way up the elevator you head inot the final room. this is where you meet the rival gang boss. In order to get back the dats you have to pry it from his cold dead hands. Weakness: NONE")
     while (bossHp > 0 and hp > 0):
-        choice = App.AskOptionedQuestion("What will you do: ", "Shoot him with you gun: SP", "fight him with your bare fists: AP", "Try and convince him to hand over the data so nobody get's hurt: IP", None)
+        choice = App.AskOptionedQuestion("What will you do: ", "Shoot him with you gun: SP", "fight him with your bare fists: AP", "Try and convince him to hand over the data so nobody get's hurt: IP")
         successValue = RollSuccess(choice, None)
         ResultOfRoll(successValue, choice)
         if(successValue == 1):
@@ -121,6 +121,7 @@ def ResultOfRoll(successValue, choice):
             
     if(hp <= 0):
         App.DisplayMessage("You died! Game over :(")
+        exit()
             
     DisplayStats()
             
