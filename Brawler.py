@@ -20,14 +20,14 @@ def StartChallenege(challengeNum):
     
     # challenege description
     if(challengeNum == 1):
-        currentWeakness = 2
-        App.DisplayMessage("the start of first challenge, Weakness: AP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        currentWeakness = 3
+        App.DisplayMessage("for the fist challenge of this mission you must find the map of this building so you know where you need to go. Weakness: IP")
+        choice = App.AskOptionedQuestion("What should you do", "beat the crap out of a grunt lying on the floor until he sends you the map data: SP", "throw a brick at a fire alarm on a higher floor causing exit maps to appear: AP", "guess what the passcode for the main computer is: IP", None)
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 2):
-        currentWeakness = 1
-        App.DisplayMessage("the start of the second challenge, Weakness: SP")
-        choice = App.AskOptionedQuestion("What should you do", "SP", "AP", "IP", None)
+        currentWeakness = 2
+        App.DisplayMessage("As you are waling along, you come aross security drones that start to hinder your path. you must now destroy them to move on. Weakness: AP")
+        choice = App.AskOptionedQuestion("What should you do", "smash them all, with your bare hands: SP", ": use debris from the ground to knock them out of the air: AP", "set an explosion to go off in the main corridor to lure all the security bots out: IP", None)
         ResultOfRoll(RollSuccess(choice, currentWeakness), choice)
     elif(challengeNum == 3):
         currentWeakness = 3
