@@ -1,7 +1,7 @@
 import App, Sharpshooter, Brawler
 
 '''
-This method deals with the gameplay
+This module deals with the gameplay
 '''
 
 # Game Introduction

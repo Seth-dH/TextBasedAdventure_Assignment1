@@ -1,6 +1,6 @@
 import App, Challenge
 
-'''This class deals with the sharshooter storyline, running all of the challeneges'''
+'''This module is for playing the sharpshooter storyline. It deals with all the mechanics that are involved in the character’s story along with the unique dialogue for the sharpshooter’s story'''
 
 charcaterDesc = "This character excels in Ranged weaponry, they are known as one of the most accurate Sharpshooters in Cyber City."
     

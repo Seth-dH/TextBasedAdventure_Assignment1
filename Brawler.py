@@ -1,5 +1,7 @@
 import App, Challenge
 
+'''This module is for playing the brawler storyline. It deals with all the mechanics that are involved in the character’s story along with the unique dialogue for the brawler’s story'''
+
 charcaterDesc = "The Brawns of the operation, this character uses his heavily augmented fists to get most jobs done. His favorite food is Mashed Potatoes."
 
 # stats numeric value:  

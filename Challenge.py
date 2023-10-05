@@ -1,6 +1,6 @@
 import random, App
     
-'''This script deals with the "Rolling" mechanic. '''
+'''This module deals with the "Rolling" mechanic. '''
     
 '''Deals with the rolling of the ‘dice’ and returns a value from -1 to 2 based on how successful the player was'''
 def RollSucess (weakness, actionType, value):

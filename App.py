@@ -1,4 +1,4 @@
-'''This is the method that deals with player interaction, along with displaying messages/story to the player'''
+'''This is the module that deals with player interaction, along with displaying messages/story to the player'''
 
 '''Is called from other modules in order to display messages to the user'''
 def DisplayMessage(textToDisplay):
